@@ -1,0 +1,4 @@
+{
+    "command": "npm install",
+    "working_directory": "/tmp/kavia/workspace/code-generation/bike-catalogue-6297-6306/frontend_bike_catalogue"
+}
