@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the Bikers Heaven header", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = screen.getByRole("banner");
+  expect(headerElement).toHaveTextContent(/Bikers Heaven/i);
+});
+
+test("renders at least one bike card", async () => {
+  render(<App />);
+  const card = await screen.findByRole("article");
+  expect(card).toBeInTheDocument();
 });
